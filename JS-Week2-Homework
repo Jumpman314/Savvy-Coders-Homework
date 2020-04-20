@@ -15,10 +15,9 @@ if (numberOfToppings <= 9) {
 
 for (numberOfToppings = 1; numberOfToppings <= 10; numberOfToppings++) {
   if (numberOfToppings === 0) {
-    console.log(numberOfToppings);
-  } else if (numberOfToppings % 2) {
-    else {
       console.log(numberOfToppings);
-    }
+  } else if (numberOfToppings % 2) {
+  } else {
+      console.log(numberOfToppings);
   }
 }
