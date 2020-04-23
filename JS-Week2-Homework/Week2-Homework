@@ -11,13 +11,13 @@ if (numberOfToppings <= 9) {
   console.log("Quality, not quantity.");
 } else {
   console.log("A whole lot of pizza.");
-};
+}
 
 for (numberOfToppings = 1; numberOfToppings <= 10; numberOfToppings++) {
   if (numberOfToppings === 0) {
-      console.log(numberOfToppings);
+    console.log(numberOfToppings);
   } else if (numberOfToppings % 2) {
   } else {
-      console.log(numberOfToppings);
+    console.log(numberOfToppings);
   }
 }
