@@ -1,13 +1,22 @@
 const pizzaPlace = "Joey's Pies";
-
 let pizzaToppings = ["Sausage", "Pepperoni", "Jalapeno", "Bacon"];
+let size = ["Small", "Medium", "Large"];
+let crust = ["Thin", "Stuffed", "Garlic Butter"];
 
-function greetCustomer() {
-    console.log(`"Welcome to ${pizzaPlace}, our toppings are ${pizzaToppings}."`);
+let greetCustomer = function() {
+  return `"Welcome to ${pizzaPlace}, our toppings are ${pizzaToppings}."`;
 };
+console.log(greetCustomer());
 
-function getPizzaOrder();
+function getPizzaOrder(size, crust, pizzaToppings) {
+  console.log(
+    `One ${size} ${crust} crust pizza with ${pizzaToppings} coming right up!`
+  );
+}
+console.log(getPizzaOrder);
 
-function preparePizza();
+for (let toppings of pizzaToppings) {
+  console.log(toppings);
+}
 
-function servePizza();
+console.log(greetCustomer());
