@@ -1,27 +1,22 @@
 const pizzaPlace = "Joey's Pies";
 let pizzaToppings = ["Sausage", "Pepperoni", "Jalapeno", "Bacon"];
-let pizzaSize = ["Small", "Medium", "Large"];
-let pizzaCrust = ["Thin", "Stuffed", "Garlic"];
+let size = ["Small", "Medium", "Large"];
+let crust = ["Thin", "Stuffed", "Garlic"];
 
 let greetCustomer = function() {
   return `"Welcome to ${pizzaPlace}, our toppings are ${pizzaToppings}."`;
 };
 console.log(greetCustomer());
 
-let obj = {
-  toppings: ["Sausage", "Pepperoni", "Jalapeno", "Bacon"],
-  size: ["Small", "Medium", "Large"],
-  crust: ["Thin", "Stuffed", "Garlic"]
-};
-
-function getPizzaOrder() {
-  return `One ${obj.size[1]} ${obj.crust[1]} crust pizza with ${obj.toppings[3]}, and ${obj.toppings[2]} coming right up!`;
+function getPizzaOrder(size, crust, toppings) {
+  return `One ${size} ${crust} crust pizza with ${toppings}, and ${toppings} coming right up!`;
 }
-console.log(getPizzaOrder());
-console.log(obj);
+console.log(getPizzaOrder("large", "thin", "bacon"));
 
+console.log(pizzaToppings.toppings);
 function preparePizza(size, crust, toppings) {
-  console.log(obj.size[1] + obj.crust[1] + obj.toppings[3]);
+  console.log(size + crust + pizzaToppings);
   return "...Cooking Pizza...";
 }
 console.log(preparePizza());
+getPizzaOrder("large", "thin", "bacon");
