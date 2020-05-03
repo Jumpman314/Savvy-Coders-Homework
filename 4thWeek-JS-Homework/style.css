@@ -1,0 +1,38 @@
+html,
+body {
+  font-family: sans-serif;
+  background-image: url("https://images.pexels.com/photos/3315961/pexels-photo-3315961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  width: 1000px;
+  border: 15px solid green;
+  padding: 100px;
+  margin: 1px;
+}
+
+.list {
+  font-size: 20px;
+  color: white;
+}
+
+h1 {
+  font-size: 70px;
+  color: white;
+}
+
+h3 {
+  font-family: Palatino, "Palatino Linotype", serif;
+  font-size: 50px;
+  color: white;
+}
+
+#hyperlinks {
+  color: #ffffff;
+}
+
+.footer {
+  color: black;
+}
+
+header > p {
+  font-size: 20px;
+  color: white;
+}
