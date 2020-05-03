@@ -1,10 +1,9 @@
-html,
 body {
   font-family: sans-serif;
   background-image: url("https://images.pexels.com/photos/3315961/pexels-photo-3315961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   width: 1000px;
   border: 15px solid green;
-  padding: 100px;
+  padding: 158px;
   margin: 1px;
 }
 
