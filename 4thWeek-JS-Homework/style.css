@@ -5,9 +5,11 @@ body {
   border: 15px solid green;
   padding: 158px;
   margin: 1px;
+  text-align: center;
 }
 
 .list {
+  display: inline-block;
   font-size: 20px;
   color: white;
 }
