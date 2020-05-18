@@ -47,7 +47,7 @@ class Woman extends Person {
 }
 const joseph = new Man("Joseph", 27, "St. Louis", "Skateboarding");
 const holly = new Woman("Holly", 29, "St. Louis", "Baking");
-console.log(joseph.setAge(24));
+joseph.setAge(24);
 console.log(joseph.getMansGreeting());
-console.log(holly.setGender("female"));
+holly.setGender("female");
 console.log(holly.getWomansGreeting());
