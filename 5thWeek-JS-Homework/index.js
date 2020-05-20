@@ -2182,7 +2182,77 @@ console.log(user5Posts);
 // Sixth Homework Bulletin
 const user5TitleAndBody = [];
 user5Posts.forEach(user5Posts => {
-  let pairs = ["Title", user5Posts.title, "Body", user5Posts.body];
+  let pairs = {
+    Title: user5Posts.title,
+    Body: user5Posts.body.replace(/(\n)/g, "")
+  };
   user5TitleAndBody.push(pairs);
 });
 console.log(user5TitleAndBody);
+
+// Bonus Challenge
+
+let usersTaskSummary = toDoData.reduce((acc, curr) => {
+  if (acc[curr.userId]) {
+    acc[curr.userId].totalTasks += 1;
+    if (curr.completed) {
+      acc[curr.userId].completeTasks += 1;
+    } else {
+      acc[curr.userId].incompleteTasks += 1;
+    }
+    return acc;
+  } else {
+    acc[curr.userId] = {
+      totalTasks: 1,
+      completeTasks: 0,
+      incompleteTasks: 0
+    };
+    if (curr.completed) {
+      acc[curr.userId].completeTasks += 1;
+    } else {
+      acc[curr.userId].incompleteTasks += 1;
+    }
+    return acc;
+  }
+}, {});
+console.log(usersTaskSummary);
+// Jonathans Solution
+/*function filtered() {
+  let titleBody = posts
+    .filter(filterTask => filterTask.userId === 5)
+    .map(filterTask => filterTask.title && filterTask.body);
+  return titleBody;
+}
+console.log(filtered());*/
+
+/* // FROM USERS
+// create and print a list of phone numbers
+const phoneNumbers = users.map(user => user.phone);
+console.log(phoneNumbers);
+// create and print a list of website and email pairs (pair them in a string, array, or object)
+const websiteEmailPairs = users.map(user => `${user.website}, ${user.email}`);
+console.log(websiteEmailPairs);
+// FROM TASKS/TODOS
+// create a list of user 9's to-dos
+const user9Tasks = tasks.filter(task => task.userId === 9);
+console.log(user9Tasks);
+// then find the number of user 9's incomplete tasks
+const user9IncompleteTasks = user9Tasks.reduce((acc, curr) => {
+  if (!curr.completed) {
+    return acc + 1;
+  }
+  return acc;
+}, 0);
+console.log(user9IncompleteTasks);
+// FROM POSTS
+// create a list of user 5's posts
+const user5Posts = posts.filter(post => post.userId === 5);
+console.log(user5Posts);
+// then, create a list of title and body pairs
+const user5TitleBodyPairs = user5Posts.map(post => {
+  return {
+    title: post.title,
+    body: post.body
+  };
+});
+console.log(user5TitleBodyPairs); */
